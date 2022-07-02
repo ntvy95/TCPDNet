@@ -1,0 +1,40 @@
+# Log and save
+steps_per_training_log: 1
+steps_per_epoch: 1000
+max_epoch: 200
+
+# Optimizer configuration
+opt_approach: OneStepTrainer
+net_opt:
+   lr:
+      init: 0.0001
+      policy: constant
+   weight_decay: 0
+   optimizer: adam
+   beta1: 0.9
+   beta2: 0.999
+
+# Loss weights
+net_loss:
+   ycbrl1_w: 1
+
+# Model configuration
+net_approach: OneStepColorPolarNet
+net:
+   init: kaiming
+   method: OneStepBilinearRefine
+   net_base: configs/base_net/unet_default.yaml
+   skip_connection_flag: True
+
+# Data configuration
+data_root: ../dataset/Morimatsu/
+pattern: GBRG, 90-45-135-0
+max_width: 1456
+max_height: 1088
+patch_size: 64
+patches_per_image: 4
+number_of_images: 6
+num_workers: 2
+augmentation:
+   ops: rot90
+   re_arrange: True

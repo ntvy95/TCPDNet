@@ -1,0 +1,14 @@
+# Model configuration
+net_approach: OneStepColorPolarNet
+net:
+   method: OneStepBilinear
+
+# Data configuration
+data_root: ../dataset/TokyoTech
+pattern: GBRG, 90-45-135-0
+max_width: 1456
+max_height: 1088
+patch_size: 64
+patches_per_image: 4
+number_of_images: 6
+num_workers: 4

@@ -1,0 +1,8 @@
+bottle.hdf5
+bubblewrap.hdf5
+smartphone.hdf5
+shell.hdf5
+glass.hdf5
+painting.hdf5
+apple.hdf5
+globe.hdf5

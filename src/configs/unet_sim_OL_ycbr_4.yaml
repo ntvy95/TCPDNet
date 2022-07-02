@@ -1,0 +1,58 @@
+# Log and save
+steps_per_training_log: 1
+steps_per_epoch: 1000
+max_epoch: 200
+
+# Optimizer configuration
+opt_approach: TwoStepSimultaneousTrainer
+color_opt:
+   lr:
+      init: 0.0001
+      policy: constant
+   weight_decay: 0
+   optimizer: adam
+   beta1: 0.9
+   beta2: 0.999
+
+polar_opt:
+   lr:
+      init: 0.0001
+      policy: constant
+   weight_decay: 0
+   optimizer: adam
+   beta1: 0.9
+   beta2: 0.999
+
+# Loss weights
+color_loss:
+   l1_w: 1
+
+polar_loss:
+   ycbrl1_w: 4
+
+# Model configuration
+net_approach: TwoStepColorPolarNet
+color_net:
+   init: kaiming
+   method: ColorBilinearRefine
+   net_base: configs/base_net/unet_default.yaml
+   skip_connection_flag: True
+
+polar_net:
+   init: kaiming
+   method: PolarBilinearRefine
+   net_base: configs/base_net/unet_default.yaml
+   skip_connection_flag: True
+
+# Data configuration
+data_root: ../dataset/OL
+pattern: RGGB, 0-45-135-90
+max_width: 1456
+max_height: 1088
+patch_size: 64
+patches_per_image: 4
+number_of_images: 6
+num_workers: 4
+augmentation:
+   ops: rot90
+   re_arrange: True

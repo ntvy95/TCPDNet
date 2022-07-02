@@ -1,0 +1,43 @@
+name: UNet
+up:
+  upsampling: bilinear
+  kernel_size: 3
+  stride: 1
+  dilation: 1
+  padding: same
+  norm: none
+  activation: relu
+  pad_type: zero
+  bias: True
+  groups: 1
+down:
+  kernel_size: 3
+  stride: 1
+  dilation: 1
+  padding: same
+  norm: none
+  activation: relu
+  pad_type: zero
+  bias: True
+  groups: 1  
+inc:
+  kernel_size: 3
+  stride: 1
+  dilation: 1
+  padding: same
+  norm: none
+  activation: relu
+  pad_type: replicate
+  bias: True
+  groups: 1  
+outc:
+  kernel_size: 3
+  stride: 1
+  dilation: 1
+  padding: same
+  norm: none
+  activation: none
+  pad_type: zero
+  bias: True
+  groups: 1 
+channels: [64, 128, 256, 512, 1024]
