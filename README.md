@@ -6,7 +6,8 @@ This is the source code github repository for our paper "Two-Step Color-Polariza
 
 - Pytorch 1.8.0.
 - CUDA 11.0. In case you run into troubles of setting up the appropriate CUDA toolkit version, please refer to [NVIDIA Docker](https://github.com/NVIDIA/nvidia-docker).
-- GPU 6GB at minimum. A high GFLOPS for FP32 operations is preferred as our network parameters are stored in 32-bit format. 
+- GPU 6GB at minimum. A high GFLOPS for FP32 operations is preferred as our network parameters are stored in 32-bit format.
+- You can consider to run the training code on [Google Colab](https://colab.research.google.com/) where you can access Nvidia T4 at free tier or Nvidia V100 / A100 at 10 USD per month [[ref](https://colab.research.google.com/notebooks/pro.ipynb)].
 
 ## Environment setup
 
