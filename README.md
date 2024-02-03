@@ -33,8 +33,10 @@ Download the data from [this link](https://github.com/wsj890411/CPDNet). Move it
 ## TCPDNet pre-trained models
 
 In [this Dropbox link](https://www.dropbox.com/scl/fo/isvkwdpgvyolavjjwdiac/h?rlkey=ubfug8fcu2phdekg1inp3wlvt&dl=0) you will find 2 folders:
+
 - CPDNetDataset: The pre-trained models on CPDNet dataset.
 - TokyoTechDataset: The pre-trained models on Tokyo Tech dataset.
+
 The result in the paper is the average of 5 trained models at the epoch 200th. Therefore, in each dataset folder, you will find 5 sub-folders each of which corresponds to one trained model.
 
 ## Evaluation
